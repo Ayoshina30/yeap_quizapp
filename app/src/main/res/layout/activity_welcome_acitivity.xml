@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#F1FCF5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="32dp"
+    tools:context=".WelcomeAcitivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/comic_neue_bold"
+        android:text="Welcome to YEAP!"
+        android:textAlignment="center"
+        android:textColor="#6EBE8A"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/comic_neue"
+            android:text="Choose your explorer"
+            android:textColor="#E5955B"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:columnCount="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintWidth_percent="0.9">
+
+            <ImageView
+                android:id="@+id/avatarPanda"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="12dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/panda_avatar" />
+
+            <ImageView
+                android:id="@+id/avatarElephant"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="12dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/elephant_avatar" />
+
+            <ImageView
+                android:id="@+id/avatarTiger"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="12dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/lion_avatar" />
+
+            <ImageView
+                android:id="@+id/avatarZebra"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="12dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/zebara_avatar" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/comic_neue_bold"
+            android:text="Enter Exploring Name"
+            android:textColor="#E5955B"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/comic_neue"
+                android:hint="Enter your explorer name"
+                android:maxLength="8"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/StartBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="#6EBE8A"
+            android:fontFamily="@font/comic_neue_bold"
+            android:text="Start Exploring!"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
